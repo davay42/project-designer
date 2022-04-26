@@ -3,11 +3,10 @@
 </script>
 
 <template lang="pug">
-.p-0.flex.flex-col.h-100vh(style="flex: 1000 1 100%" )
+.p-4.md_p-8.flex.flex-col.h-100vh(style="flex: 1000 1 100%" )
   router-view(v-slot="{ Component }")
     transition(name="fade" mode="out-in")
-      keep-alive
-        component.flex-auto.overflow-y-scroll(:is="Component")
+      component.flex-auto.overflow-y-scroll(:is="Component")
 
 </template>
 
@@ -25,5 +24,9 @@ body {
 
 #app {
   @apply min-h-100vh max-h-100vh flex flex-col;
+}
+
+button.btn {
+  @apply p-2 rounded-xl shadow hover_shadow-lg transition;
 }
 </style>

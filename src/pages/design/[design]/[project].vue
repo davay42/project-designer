@@ -1,9 +1,12 @@
 <script setup>
 const props = defineProps({
-  file: String
+  project: String
 })
+
+
+
 </script>
 
 <template lang='pug'>
-p {{ file }}
+p {{ project }}
 </template>

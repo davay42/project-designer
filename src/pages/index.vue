@@ -1,32 +1,22 @@
 <script setup>
-import fs from 'vite-plugin-fs/browser';
-
+import { useDir } from '~/composables/fs.js'
 
 const newProject = ref('')
 
-async function createProject() {
-  if (!newProject.value) return
-  await fs.writeFile(newProject.value + '.md', 'content')
-  loadProjects()
-}
-
-const projects = ref()
-
-async function loadProjects() {
-  projects.value = await fs.readdir('/')
-}
-
-onMounted(async () => {
-  loadProjects()
-})
+const { dir, load, createIndex } = useDir('/')
 
 </script>
 
 <template lang='pug'>
-.p-8
-  .text-4xl Projects
-  .p-4.rounded.bg-light-100.flex.gap-2
-    input(v-model="newProject")
-    button.bg-light-600(@click="createProject()") Create Project 
-  router-link.p-4(v-for="project in projects" :key="project" :to="`/project/${project}`") {{ project }}
+.flex.flex-col.gap-4
+  .flex
+    .text-4xl Designs
+    .flex-1
+    button.btn(@click="load()") Reload
+  .p-4.rounded-xl.bg-light-100.flex.flex-wrap.gap-2
+    input.p-4(v-model="newProject")
+    button.btn(@click="createIndex(newProject); newProject = ''") Add new design
+
+  router-link(v-for="design in dir" :key="design" :to="`/design/${design}`")
+    design-card(:slug="design")
 </template>

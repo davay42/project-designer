@@ -2,7 +2,8 @@ import { createApp } from "vue";
 import App from "./app.vue";
 
 import "virtual:windi.css";
-// import "@gun-vue/components/styles.css";
+import "./styles/transitions.css";
+
 
 import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "~pages";
@@ -23,12 +24,3 @@ const app = createApp(App);
 
 app.use(router).mount("#app");
 
-import { currentRoom } from "@gun-vue/composables";
-
-router.beforeEach((to, from, next) => {
-  if (!currentRoom.isRoot && !to.query?.room) {
-    next({ ...to, query: { room: currentRoom.pub } });
-  } else {
-    next();
-  }
-});

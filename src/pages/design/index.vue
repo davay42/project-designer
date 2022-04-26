@@ -3,5 +3,5 @@
 </script>
 
 <template lang='pug'>
-p Projects
+p Designs
 </template>

@@ -27,7 +27,7 @@ export default defineConfig({
   plugins: [
     vue(),
     fs({
-      rootDir: './projects'
+      rootDir: './designs'
     }),
     AutoImport({
       imports: ['vue', '@vueuse/core']
@@ -35,7 +35,7 @@ export default defineConfig({
     Pages({
       dirs: "src/pages",
       routeBlockLang: 'yaml',
-      onRoutesGenerated: routes => (generateSitemap({ routes, hostname: 'https://gun-vue.js.org' })),
+      // onRoutesGenerated: routes => (generateSitemap({ routes, hostname: 'https://gun-vue.js.org' })),
     }),
     WindiCSS({
       scan: {
@@ -115,11 +115,11 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["vue", "vue-router", "@vueuse/core", "@gun-vue/components"],
+    include: ["vue", "vue-router", "@vueuse/core"],
   },
   resolve: {
     alias: {
-      "~": path.resolve(dirname, "/"),
+      "~": path.resolve(dirname, "/src/"),
     },
   },
 });
