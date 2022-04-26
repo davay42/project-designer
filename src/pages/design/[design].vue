@@ -1,7 +1,10 @@
 <script setup>
+
 const props = defineProps({
   design: String
 })
+
+
 </script>
 
 <template lang='pug'>

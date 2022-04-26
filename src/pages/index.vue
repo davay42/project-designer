@@ -12,7 +12,8 @@ const { dir, load, createIndex } = useDir('/')
   .flex
     .text-4xl Designs
     .flex-1
-    button.btn(@click="load()") Reload
+    button.btn(@click="load()")
+      ion-reload
   .p-4.rounded-xl.bg-light-100.flex.flex-wrap.gap-2
     input.p-4(v-model="newProject")
     button.btn(@click="createIndex(newProject); newProject = ''") Add new design

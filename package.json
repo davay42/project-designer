@@ -1,8 +1,8 @@
 {
-  "name": "@gun-vue/app",
+  "name": "project-designer",
   "private": true,
-  "version": "0.9.1",
-  "homepage": "https://gun-vue.js.org",
+  "version": "0.0.1",
+  "homepage": "",
   "author": "davay42 <davay@defucc.me>",
   "funding": {
     "type": "ko-fi",
@@ -16,12 +16,13 @@
   },
   "dependencies": {
     "@vueuse/core": "8.3.1",
-    "ola": "^1.2.1",
     "vue": "^3.2.33",
     "vue-router": "^4.0.14",
     "vite-plugin-fs": "^1.0.0-beta.3",
     "slugify": "^1.6.5",
-    "front-matter": "^4.0.2"
+    "smart-matter": "^1.0.1",
+    "markdown-it": "^13.0.0",
+    "js-yaml": "^4.1.0"
   },
   "devDependencies": {
     "@iconify/json": "^2.1.32",
