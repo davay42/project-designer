@@ -1,0 +1,41 @@
+{
+  "name": "@gun-vue/app",
+  "private": true,
+  "version": "0.9.1",
+  "homepage": "https://gun-vue.js.org",
+  "author": "davay42 <davay@defucc.me>",
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/davay"
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite  build --base=./ --emptyOutDir",
+    "preview": "vite preview --host",
+    "deploy": "sh deploy.sh"
+  },
+  "dependencies": {
+    "@gun-vue/components": "^0.9.2",
+    "@gun-vue/composables": "^0.9.1",
+    "@gun-vue/relay": "^0.3.6",
+    "@vueuse/core": "8.3.1",
+    "ola": "^1.2.1",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14",
+    "vite-plugin-fs": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.1.32",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "pug": "3.0.2",
+    "unplugin-icons": "^0.14.1",
+    "unplugin-vue-components": "^0.19.3",
+    "vite": "^2.9.5",
+    "vite-plugin-pages": "^0.23.0",
+    "vite-plugin-pages-sitemap": "^1.2.2",
+    "vite-plugin-pwa": "^0.12.0",
+    "vite-plugin-windicss": "^1.8.4",
+    "unplugin-auto-import": "^0.7.1",
+    "windicss": "^3.5.1"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+dist
+_dist
+dist-ssr
+*.local
+radata
+public/docs
+public/means
+public/sitemap.xml
+.env
